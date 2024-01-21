@@ -5,6 +5,7 @@ import SavingTablesVue from '@/views/SavingTables.vue'
 import LoginPageVue from '@/layouts/LoginPage.vue'
 import AboutViewVue from '@/views/AboutView.vue'
 import AdminManagementVue from '@/views/AdminManagement.vue'
+import MemberManagementVue from '@/views/MemberManagement.vue'
 
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
         path: "/admin/admin-management",
         name:"admin-management",
         component: AdminManagementVue,
+      },
+      {
+        path: "/admin/member-management",
+        name:"member-management",
+        component: MemberManagementVue,
       },
     ],
   },

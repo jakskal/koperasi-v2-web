@@ -50,7 +50,7 @@
                 <form class="mt-6 mb-4 md:hidden">
                     <div class="mb-3 pt-0">
                         <input type="text" placeholder="Search"
-                            class="border-0 px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
+                            class="px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
                     </div>
                 </form>
 
@@ -73,6 +73,21 @@
                                 <i class="fas fa-tv mr-2 text-sm"
                                     :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"></i>
                                 Dashboard
+                            </a>
+                        </router-link>
+                    </li>
+
+
+                    <li class="items-center">
+                        <router-link to="/admin/member-management" v-slot="{ href, navigate, isActive }">
+                            <a :href="href" @click="navigate" class="text-xs uppercase py-3 font-bold block" :class="[
+                                isActive
+                                    ? 'text-emerald-500 hover:text-emerald-600'
+                                    : 'text-blueGray-700 hover:text-blueGray-500'
+                            ]">
+                                <i class="fas fa-user-group mr-2 text-sm"
+                                    :class="[isActive ? 'opacity-75' : 'text-blueGray-300']"></i>
+                                Anggota
                             </a>
                         </router-link>
                     </li>

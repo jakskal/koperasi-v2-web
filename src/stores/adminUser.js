@@ -14,21 +14,22 @@ export const useAdminUserStore = defineStore('adminUser', () => {
   })
 
   const selectedUser = reactive({
-    name: 'member23',
-    email: 'member23@gmail.com',
-    password: 'password',
-    phone: 628992981508,
+    name: '',
+    email: '',
+    password: '',
+    phone: 0,
     role_id: 2,
     status_id: 1,
     attribute: null
   })
 
   async function deleteAdminUser(id) {
-    await axios.delete(`/admin/user/${id}`).catch((err) => {
-      alert('failed delete user')
-      console.log(err)
-    })
-    indexStore.componentKey++
+    await axios.delete(`/admin/user/${id}`).then(
+      ).catch((err) => {
+        alert('failed delete user')
+        console.log(err)
+      })
+      indexStore.componentKey++
   }
 
   async function getUserAdmins() {
@@ -75,8 +76,7 @@ export const useAdminUserStore = defineStore('adminUser', () => {
 
   async function updateAdminUser(id) {
     await axios.put(`/admin/user/${id}`, selectedUser).then(async () => {
-      const data = await getUserAdmins()
-      userAdminList.value = data
+      componentKey.value++
     })
   }
 
