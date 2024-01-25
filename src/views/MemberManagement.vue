@@ -38,7 +38,6 @@ export default {
         const memberList = computed(()=> memberUserStore.userMemberList)
 
         async function closeAddMemberModal(shuoldReload) {
-            console.log("hitted");
             state.isModalAddMemberOpen = false
             if (shuoldReload == true) {
                 await reloadMemberList()
@@ -51,7 +50,6 @@ export default {
         }
 
         async function closeUpdateMemberModal(shuoldReload) {
-            console.log("called emit")
             state.isModalUpdateMemberOpen = false
             if (shuoldReload == true) {
                 await reloadMemberList()

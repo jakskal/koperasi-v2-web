@@ -6,6 +6,8 @@ import LoginPageVue from '@/layouts/LoginPage.vue'
 import AboutViewVue from '@/views/AboutView.vue'
 import AdminManagementVue from '@/views/AdminManagement.vue'
 import MemberManagementVue from '@/views/MemberManagement.vue'
+import SavingTypeManagementVue from '@/views/SavingTypeManagement.vue'
+import LoanTypeManagementVue from '@/views/LoanTypeManagement.vue'
 
 
 const routes = [
@@ -41,6 +43,16 @@ const routes = [
         path: "/admin/member-management",
         name:"member-management",
         component: MemberManagementVue,
+      },
+      {
+        path: "/admin/saving-type-management",
+        name:"saving-type-member-management",
+        component: SavingTypeManagementVue,
+      },
+      {
+        path: "/admin/loan-type-management",
+        name:"loan-type-member-management",
+        component: LoanTypeManagementVue,
       },
     ],
   },

@@ -106,22 +106,15 @@ export default {
         alert("gagal update anggota")
       }
       emit("closeUpdateMemberModal", true)
-
-      console.log("hitted");
     }
 
-    function toDateInput(dateStr){
-      if (dateStr == "") {
-        return dateStr
-      }
-      return Date.parse(dateStr)
-    }
+
 
     const isLoading = ref(false)
     function toggleShow() {
       this.showPassword = !this.showPassword;
     }
-    return { selectedUser, closeUpdateMemberModal, updateMember, isLoading, showPassword, toggleShow, toDateInput }
+    return { selectedUser, closeUpdateMemberModal, updateMember, isLoading, showPassword, toggleShow }
   },
   components: { ModalContainer }
 }
