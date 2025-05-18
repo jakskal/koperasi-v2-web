@@ -51,9 +51,18 @@ export const useMemberUserStore = defineStore('memberUser', () => {
     indexStore.componentKey++
   }
 
-  async function getUserMembers() {
+  async function getUserMembers(keyword) {
+    let query = {
+      params: {
+        role_id: 3
+      }
+    }
+    if (keyword != ""){
+      query.params.keyword = keyword
+      query.params.page_size = 5
+    }
     const { data } = await axios
-      .get('/admin/users?role_id=3')
+      .get('/admin/users?', query )
       .then()
       .catch((err) => {
         console.log('error', err)

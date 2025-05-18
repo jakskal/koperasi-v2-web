@@ -8,6 +8,7 @@ import AdminManagementVue from '@/views/AdminManagement.vue'
 import MemberManagementVue from '@/views/MemberManagement.vue'
 import SavingTypeManagementVue from '@/views/SavingTypeManagement.vue'
 import LoanTypeManagementVue from '@/views/LoanTypeManagement.vue'
+import MemberSavingVue from '@/views/MemberSaving.vue'
 
 
 const routes = [
@@ -53,6 +54,11 @@ const routes = [
         path: "/admin/loan-type-management",
         name:"loan-type-member-management",
         component: LoanTypeManagementVue,
+      },
+      {
+        path: "/admin/member-saving",
+        name:"member-saving",
+        component: MemberSavingVue,
       },
     ],
   },
